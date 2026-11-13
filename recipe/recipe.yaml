@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.1.3"
+  version: "0.1.4"
 
 package:
   name: batchcorder
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/b/batchcorder/batchcorder-${{ version }}.tar.gz
-  sha256: bd74b90c83d146bf1bbf4582c1e7e04b312fe17df8bf1b034c0ba90532bf2b14
+  sha256: 8b2e06d1128735f05b7d6ec733c92e370d3a314092467fcdf0f167d1ca10162d
 
 build:
-  number: 1
+  number: 0
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
