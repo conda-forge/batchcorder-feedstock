@@ -5,7 +5,7 @@
 
 [workspace]
 name = "batchcorder-feedstock"
-version = "2026.8.9"  # conda-smithy version used to generate this file
+version = "2026.11.6"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/batchcorder-feedstock"
 authors = ["@conda-forge/batchcorder"]
 channels = ["conda-forge"]
@@ -29,6 +29,7 @@ description = "Lint the feedstock recipe"
 [feature.build.dependencies]
 conda-build = ">=26.3"
 conda-forge-ci-setup = "4.*"
+python = "3.14.*"
 rattler-build = "*"
 
 [feature.build.tasks.inspect-all]
@@ -38,47 +39,47 @@ description = "List contents of all packages found in rattler-build build direct
 cmd = "rattler-build build --recipe recipe"
 description = "Build batchcorder-feedstock directly (without setup scripts), no particular variant specified"
 [feature.build.tasks."build-linux_64_is_python_mintruepython3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_is_python_mintruepython3.11.____cpython.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_is_python_mintruepython3.11.____cpython.yaml --target-platform linux-64"
 description = "Build batchcorder-feedstock with variant linux_64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-linux_64_is_python_mintruepython3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_is_python_mintruepython3.11.____cpython.yaml"
-description = "Build batchcorder-feedstock with variant linux_64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_is_python_mintruepython3.11.____cpython.yaml --target-platform linux-64"
+description = "Debug batchcorder-feedstock with variant linux_64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_64_is_python_mintruepython3.11.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_is_python_mintruepython3.11.____cpython.yaml"
 description = "List contents of batchcorder-feedstock packages built for variant linux_64_is_python_mintruepython3.11.____cpython"
 [feature.build.tasks."build-linux_aarch64_is_python_mintruepython3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_is_python_mintruepython3.11.____cpython.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_is_python_mintruepython3.11.____cpython.yaml --target-platform linux-aarch64"
 description = "Build batchcorder-feedstock with variant linux_aarch64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-linux_aarch64_is_python_mintruepython3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_is_python_mintruepython3.11.____cpython.yaml"
-description = "Build batchcorder-feedstock with variant linux_aarch64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_is_python_mintruepython3.11.____cpython.yaml --target-platform linux-aarch64"
+description = "Debug batchcorder-feedstock with variant linux_aarch64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_aarch64_is_python_mintruepython3.11.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_is_python_mintruepython3.11.____cpython.yaml"
 description = "List contents of batchcorder-feedstock packages built for variant linux_aarch64_is_python_mintruepython3.11.____cpython"
 [feature.build.tasks."build-osx_64_is_python_mintruepython3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_is_python_mintruepython3.11.____cpython.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_is_python_mintruepython3.11.____cpython.yaml --target-platform osx-64"
 description = "Build batchcorder-feedstock with variant osx_64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-osx_64_is_python_mintruepython3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_is_python_mintruepython3.11.____cpython.yaml"
-description = "Build batchcorder-feedstock with variant osx_64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_is_python_mintruepython3.11.____cpython.yaml --target-platform osx-64"
+description = "Debug batchcorder-feedstock with variant osx_64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."inspect-osx_64_is_python_mintruepython3.11.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_is_python_mintruepython3.11.____cpython.yaml"
 description = "List contents of batchcorder-feedstock packages built for variant osx_64_is_python_mintruepython3.11.____cpython"
 [feature.build.tasks."build-osx_arm64_is_python_mintruepython3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_is_python_mintruepython3.11.____cpython.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_is_python_mintruepython3.11.____cpython.yaml --target-platform osx-arm64"
 description = "Build batchcorder-feedstock with variant osx_arm64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-osx_arm64_is_python_mintruepython3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_is_python_mintruepython3.11.____cpython.yaml"
-description = "Build batchcorder-feedstock with variant osx_arm64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_is_python_mintruepython3.11.____cpython.yaml --target-platform osx-arm64"
+description = "Debug batchcorder-feedstock with variant osx_arm64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."inspect-osx_arm64_is_python_mintruepython3.11.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_is_python_mintruepython3.11.____cpython.yaml"
 description = "List contents of batchcorder-feedstock packages built for variant osx_arm64_is_python_mintruepython3.11.____cpython"
 [feature.build.tasks."build-win_64_is_python_mintruepython3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_is_python_mintruepython3.11.____cpython.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_is_python_mintruepython3.11.____cpython.yaml --target-platform win-64"
 description = "Build batchcorder-feedstock with variant win_64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-win_64_is_python_mintruepython3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_is_python_mintruepython3.11.____cpython.yaml"
-description = "Build batchcorder-feedstock with variant win_64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_is_python_mintruepython3.11.____cpython.yaml --target-platform win-64"
+description = "Debug batchcorder-feedstock with variant win_64_is_python_mintruepython3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."inspect-win_64_is_python_mintruepython3.11.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_is_python_mintruepython3.11.____cpython.yaml"
 description = "List contents of batchcorder-feedstock packages built for variant win_64_is_python_mintruepython3.11.____cpython"
